@@ -12,13 +12,6 @@
 
     var toTransclude;
 
-    $scope.$on('$destroy', function(){
-      if(toTransclude){
-        toTransclude.remove();
-        toTransclude = null;
-      }
-    });
-
     // Transclude content that matches name into element.
     this.transclude = function(name, element){
       for(var i = 0; i < toTransclude.length; ++i){
